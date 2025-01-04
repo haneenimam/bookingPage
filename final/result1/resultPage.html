@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <link rel="stylesheet" href="resultPage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header id="header"><!-- header contains h1 and filters-->
+       
+        <div>
+            <h1 class="planeInfo"> Explore</h1>
+            <h2 class="planeInfo">From: <span id="fromThisCountry" class="info"></span></h2>
+            <h2 class="planeInfo">To: <span id="toThisCountry" class="info"></span></h2>
+            <h2 class="planeInfo">Take Off: <span id="dateOftakeoff" class="info"></span></h2>
+            <h2 class="planeInfo">Return: <span id="dateOfreturn" class="info"></span></h2>
+        </div>
+            
+
+
+
+  
+        <div>
+            <div class="filter" data-filter="availableFlights">Available flights</div>
+            <div class="filter" data-filter="cheapest">Cheapest flights</div>
+            <div class="filter" data-filter="directFlights">Direct flights</div>
+            <div class="filter" data-filter="suggestedforyou">Suggested for you</div>
+            <div class="filter" data-filter="underratedDestinations">Underrated destinations</div>
+            <div class="filter"data-filter="artAndCulture">Art and culture</div>
+            <div class="filter"data-filter="greatFood">Great food</div>
+            <div class="filter" data-filter="nightlifeAndEntertainment">Nightlife and entertainment</div>
+        </div>
+    </header>
+    <!--end of the header-->
+    <br><br>
+    <main id="fligthOption">  <!--main-->
+
+        <div class="display">
+            <div class="maincountry"  data-filter="cheapest  greatFood artAndCulture suggestedforyou availableFlights greatFood" >
+                <img class="country" src="Edinburgh.jpg">
+                <h3 class="nameofcountry" id="nameofCoun">Edinburgh</h3>
+                <form class="planeandview">
+                    <label for="Edinburgh"></label>
+                    <i id="plane" class="fa-solid fa-plane"></i> <input type="button" id="Edinburgh" class="view"
+                        value="VIEW" title="view for more details" onclick="goToBooking()">
+                </form>
+            </div>
+
+            <div class="maincountry" data-filter="cheapest availableFlights greatFood underratedDestinations">
+                <img class="country" src="Liverpool.jpg">
+                <h3 class="nameofcountry">Liverpool</h3>
+                <form class="planeandview">
+                    <label for="Liverpool"></label>
+                    <i id="plane" class="fa-solid fa-plane"></i> <input type="button" id="Liverpool" value="VIEW"
+                        class="view" title="view for more details" />
+                </form>
+            </div>
+
+            <div class="maincountry" data-filter="nightlifeAndEntertainment greatFood artAndCulture 
+           directFlights suggestedforyou availableFlights ">
+                <img class="country" src="London.jpg">
+                <h3 class="nameofcountry">London</h3>
+                <form class="planeandview">
+                    <label for="london"></label>
+                    <i id="plane" class="fa-solid fa-plane"></i> <input type="button" id="london" value="VIEW"
+                        class="view" title="view for more details" />
+                </form>
+            </div>
+
+            
+
+            <div class="maincountry" data-filter="directFlights suggestedforyou nightlifeAndEntertainment availableFlights underratedDestinations" >
+                <img class="country" src="Manchester.png">
+                <h3 class="nameofcountry">Manchester</h3>
+                <form class="planeandview">
+                    <label for="Manchester"></label>
+                    <i id="plane" class="fa-solid fa-plane"></i>
+                    <input type="button" id="Manchester" value="VIEW" class="view" title="view for more details" />
+                </form>
+            </div>
+
+
+        
+       
+
+            <div class="maincountry" data-filter="suggestedforyou nightlifeAndEntertainment availableFlights cheapest greatFood underratedDestinations">
+                <img class="country" src="Birmingham.jpg">
+                <h3 class="nameofcountry">Birmingham</h3>
+                <form class="planeandview">
+                    <label for="Birmingham"></label>
+                    <i id="plane" class="fa-solid fa-plane"></i> <input type="button" id="Birmingham" value="VIEW"
+                        class="view" title="view for more details" />
+                </form>
+            </div>
+          
+        </div>
+     <!--End of display 8-->
+
+    </main>
+    <div id="footer-placeholder"></div>
+
+
+
+    <script src="resultPage.js"></script>
+    
+</body>
+
+</html>
